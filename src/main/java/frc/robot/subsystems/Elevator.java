@@ -80,6 +80,7 @@ public class Elevator extends BroncSystem {
 
   public void setConfigAuto() {
     setConfig(SubsystemConstants.ElevatorConstants.elevatorConfigFast());
+    setConfig(SubsystemConstants.ElevatorConstants.elevatorConfig());
   }
 
   @Override

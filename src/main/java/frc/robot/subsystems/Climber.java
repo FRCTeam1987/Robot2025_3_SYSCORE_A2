@@ -34,6 +34,8 @@ import edu.wpi.first.units.measure.AngularVelocity;
 import edu.wpi.first.units.measure.Current;
 import edu.wpi.first.units.measure.Voltage;
 import edu.wpi.first.wpilibj.GenericHID;
+import edu.wpi.first.wpilibj.GenericHID.RumbleType;
+import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.RobotContainer;
 import frc.robot.state.Abomination;
 import frc.robot.state.commands.AsyncRumble;
@@ -139,7 +141,7 @@ public class Climber extends BroncSystem {
 
   public void climb() {
     setPosition(mmClimb);
-    new AsyncRumble(RobotContainer.JOYSTICK.getHID(), GenericHID.RumbleType.kBothRumble, 1.0, 1000L).schedule();
+    RobotContainer.JOYSTICK.getHID().setRumble(RumbleType.kBothRumble, 1.0);
     ROLLER.setControl(stopRollers);
     // setPosition(FULLY_CLIMBED);
 
@@ -163,6 +165,7 @@ public class Climber extends BroncSystem {
   }
 
   public void coast() {
+    RobotContainer.JOYSTICK.getHID().setRumble(RumbleType.kBothRumble, 0.0);
     if (isCoast) {
       return;
     }

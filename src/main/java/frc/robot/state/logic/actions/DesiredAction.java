@@ -1,6 +1,7 @@
 package frc.robot.state.logic.actions;
 
 public enum DesiredAction {
+  IDLE_GENERIC,
   IDLE_CORAL,
   IDLE_ALGAE,
   CLIMB_INIT,

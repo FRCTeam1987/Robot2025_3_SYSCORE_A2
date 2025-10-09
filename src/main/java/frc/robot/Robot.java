@@ -24,6 +24,8 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.WrapperCommand;
 import frc.robot.autos.AutoHelpers;
+import frc.robot.state.Abomination;
+import frc.robot.state.logic.actions.DesiredAction;
 
 public class Robot extends TimedRobot {
   private WrapperCommand AUTONOMOUS_COMMAND;
@@ -119,6 +121,7 @@ public class Robot extends TimedRobot {
     RobotContainer.autoTime = Timer.getFPGATimestamp();
     RobotContainer.ELEVATOR.setConfigTeleop();
     RobotContainer.VISION.setShouldUpdatePose(true);
+    Abomination.setAction(DesiredAction.IDLE_GENERIC);
     if (AUTONOMOUS_COMMAND != null) {
       AUTONOMOUS_COMMAND.cancel();
     }

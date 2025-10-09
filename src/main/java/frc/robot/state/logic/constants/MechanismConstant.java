@@ -10,7 +10,7 @@ public enum MechanismConstant {
   // CORAL SCORING LOCATIONS
   L1(Inches.of(0.0), Degrees.of(140)),
   L2(Inches.of(1.0), Degrees.of(296.5)),
-  L3(Inches.of(18.5), Degrees.of(297.5)),
+  L3(Inches.of(17.85), Degrees.of(297.5)),
   L4(Inches.of(47.95), Degrees.of(314.25)),
 
   // ALGAE SCORING LOCATIONS
