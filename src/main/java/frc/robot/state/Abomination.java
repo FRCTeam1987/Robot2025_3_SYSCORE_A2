@@ -52,7 +52,7 @@ public class Abomination {
           case ALGAE_2, ALGAE_3 -> {
             if (ARM.hasAlgae()) {
               if (SCORE_MODE != ScoreMode.NET && SCORE_MODE != ScoreMode.PROCESSOR) {
-                setScoreMode(ScoreMode.PROCESSOR, true);
+                setScoreMode(ScoreMode.NET, true);
                 setAction(DesiredAction.IDLE_ALGAE);
               }
               return COLLECTED_ALGAE;

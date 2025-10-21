@@ -316,8 +316,10 @@ public enum FunctionalState {
                             LIGHTS.setControl(new SingleFadeAnimation(SIDE_START, UPRIGHTS_END).withSlot(0).withColor(C).withFrameRate(60));
                           } else {
                             RGBWColor C = getScoreColor();
-                            LIGHTS.setControl(new LarsonAnimation(SIDE_START, SIDE_END).withSlot(0).withColor(C).withBounceMode(LarsonBounceValue.Center).withFrameRate(CLIMB_CLIMB_SPEED));
-                            LIGHTS.setControl(new LarsonAnimation(UPRIGHTS_START, UPRIGHTS_END).withSlot(1).withColor(C).withBounceMode(LarsonBounceValue.Center).withFrameRate(UP_SPEED));
+                            LIGHTS.setControl(new StrobeAnimation(SIDE_START, SIDE_END).withSlot(0).withColor(C).withFrameRate(SCORE_STROBE_SPEED));
+                            LIGHTS.setControl(new StrobeAnimation(UPRIGHTS_START, UPRIGHTS_END).withSlot(1).withColor(C).withFrameRate(SCORE_STROBE_SPEED));
+                            //LIGHTS.setControl(new LarsonAnimation(SIDE_START, SIDE_END).withSlot(0).withColor(C).withBounceMode(LarsonBounceValue.Center).withFrameRate(CLIMB_CLIMB_SPEED));
+                            //LIGHTS.setControl(new LarsonAnimation(UPRIGHTS_START, UPRIGHTS_END).withSlot(1).withColor(C).withBounceMode(LarsonBounceValue.Center).withFrameRate(UP_SPEED));
                           }
             }
             )),
