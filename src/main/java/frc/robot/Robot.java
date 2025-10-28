@@ -103,8 +103,7 @@ public class Robot extends TimedRobot {
       RobotContainer.VISION.setShouldUpdatePose(false);
       DRIVETRAIN.tareEverything();
       AUTONOMOUS_COMMAND.schedule();
-    }
-    if (hasRunAuto) {
+    } else if (hasRunAuto) {
       RobotContainer.VISION.setShouldUpdatePose(true);
     }
     RobotContainer.ELEVATOR.setConfigAuto();

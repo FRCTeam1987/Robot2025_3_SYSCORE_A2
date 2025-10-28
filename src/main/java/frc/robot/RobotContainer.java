@@ -96,6 +96,7 @@ public class RobotContainer {
         SmartDashboard.putNumber("ARM OFFSET", Utils.getArmOverride());
         SmartDashboard.putNumber("MATCH TIME", DriverStation.getMatchTime());
     SmartDashboard.putNumber("MATCH TIME 2", RobotContainer.getRuntime());
+    SmartDashboard.putData("ENABLE VISION", new InstCmd(() -> RobotContainer.VISION.setShouldUpdatePose(true)));
 
     // Uncomment to display all possible DriveToPose destinations (looks epic gamer cool)
     //    ArrayList<Pose2d> posesRed = new ArrayList<Pose2d>();
